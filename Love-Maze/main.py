@@ -48,7 +48,7 @@ class Main():
         cols, rows = frame_size[0] // tile, frame_size[-1] // tile
         maze = Maze(cols, rows)
         game = Game(maze.grid_cells[-1], tile)
-        player_image_path = r"C:\Users\Daniel Cao\Desktop\hack110-project-ashley-daniel\Love-Maze\img\thomassprite.png"
+        player_image_path = r"Love-Maze/img/thomassprite.png"
         player = Player(tile // 3, tile // 3, player_image_path)
         clock = Clock()
         maze.generate_maze()
