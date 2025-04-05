@@ -12,18 +12,18 @@ class Main():
     def __init__(self, screen):
         self.screen = screen
         self.font = pygame.font.SysFont("impact", 30)
-        self.message_color = pygame.Color("cyan")
+        self.message_color = pygame.Color("red")
         self.running = True
         self.game_over = False
         self.FPS = pygame.time.Clock()
 
     def instructions(self):
-        instructions1 = self.font.render('Use', True, self.message_color)
-        instructions2 = self.font.render('Arrow Keys', True, self.message_color)
-        instructions3 = self.font.render('to Move', True, self.message_color)
-        self.screen.blit(instructions1,(655,300))
+        instructions1 = self.font.render('Goal:', True, self.message_color)
+        instructions2 = self.font.render('Find Asia', True, self.message_color)
+        instructions3 = self.font.render('!!!', True, self.message_color)
+        self.screen.blit(instructions1,(610,300))
         self.screen.blit(instructions2,(610,331))
-        self.screen.blit(instructions3,(630,362))
+        self.screen.blit(instructions3,(650,362))
     # draws all configs; maze, player, instructions, and time
     def _draw(self, maze, tile, player, game, clock):
         # draw maze
@@ -97,7 +97,7 @@ if __name__ == "__main__":
     screen = (window_size[0] + 150, window_size[-1])
     tile_size = 30
     screen = pygame.display.set_mode(screen)
-    pygame.display.set_caption("Maze")
+    pygame.display.set_caption("Love Maze")
 
     game = Main(screen)
     game.main(window_size, tile_size)

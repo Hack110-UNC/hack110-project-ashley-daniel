@@ -6,21 +6,21 @@ pygame.font.init()
 class Game:
     def __init__(self, goal_cell, tile):
         self.font = pygame.font.SysFont("impact", 35)
-        self.message_color = pygame.Color("darkorange")
+        self.message_color = pygame.Color("darkred")
         self.goal_cell = goal_cell
         self.tile = tile
 
     # add goal point for player to reach
     def add_goal_point(self, screen):
         # adding gate for the goal point
-        img_path = "/Users/ash.ley/hack110/hack110-project-ashley-daniel/Love-Maze/img/thomassprite.png"
+        img_path = "/Users/ash.ley/hack110/hack110-project-ashley-daniel/Love-Maze/img/asiasprite.png"
         img = pygame.image.load(img_path)
         img = pygame.transform.scale(img, (self.tile, self.tile))
         screen.blit(img, (self.goal_cell.x * self.tile, self.goal_cell.y * self.tile))
 
     # winning message
     def message(self):
-        msg = self.font.render('You Win!!', True, self.message_color)
+        msg = self.font.render('Thomas Wins!!', True, self.message_color)
         return msg
 
     # checks if player reached the goal point
