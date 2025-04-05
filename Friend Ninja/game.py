@@ -24,7 +24,7 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
 
-background = pygame.image.load('images/background.jpg')
+background = pygame.image.load('background.jpg')
 font = pygame.font.Font(None, 42)
 score_count = font.reader('Score: ' + str(score), True, (255, 255, 255))
 lives_icon = pygame.image.load('images/heart.jpg')
