@@ -12,7 +12,7 @@ class Clock:
 
     # Start the timer
     def start_timer(self):
-        self.start_time = time.time()
+        self.start_time = time.time() 
 
     # Update the timer
     def update_timer(self):
