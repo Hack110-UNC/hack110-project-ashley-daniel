@@ -142,7 +142,7 @@ while game_running :
                         show_gameover_screen()
                         game_over = True
 
-                    half_fruit_path = "images/explosion.png"
+                    half_fruit_path = "images/Preview_107.png"
                 else:
                     half_fruit_path = "images/" + "half_" + key + ".png"
 
