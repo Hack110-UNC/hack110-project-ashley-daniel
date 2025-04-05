@@ -8,7 +8,7 @@ class Player:
         self.player_size = 10
         self.image = pygame.image.load(image_path) 
         self.image = pygame.transform.scale(self.image, (self.player_size, self.player_size))
-        self.rect = pygame.Rect(self.x, self.y, self.player_size, self.player_size)
+        self.rect = self.image.get_rect(topleft = (self.x, self.y))
         self.velX = 0
         self.velY = 0
         self.left_pressed = False
