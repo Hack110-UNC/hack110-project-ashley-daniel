@@ -8,13 +8,13 @@ lives = 3
 score = 0
 friends = ['thomas', 'caroline', 'asia', 'dylan', 'josh', 'paris', 'bomb']
 
-screen_width = 800
-screen_height = 500
+WIDTH = 800
+HEIGHT = 500
 FPS = 20
 
 pygame.init()
 pygame.display.set_caption('Friend Ninja')
-gameDisplay = pygame.display.set_mode((screen_width, screen_height))
+gameDisplay = pygame.display.set_mode((WIDTH, HEIGHT))
 
 clock = pygame.time.Clock()
 
@@ -56,7 +56,7 @@ def hide_cross_lives(x, y):
     gameDisplay.blit(pygame.imagge.load("images/empty_heart.png"), (x,y))
 
 
-font_name = pygame.font.match_font(None)
+font_name = pygame.font.match_font("Arial")
 def draw_text(display, text, size, x, y):
     font = pygame.font.Font(font_name, size)
     text_surface = font.render(text, True, WHITE)
