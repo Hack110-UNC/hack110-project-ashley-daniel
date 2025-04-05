@@ -78,7 +78,7 @@ def show_gameover_screen():
     if not game_over :
         draw_text(gameDisplay, "Score : " + str(score), 50, WIDTH / 2, HEIGHT / 2)
     
-    draw_text(gameDisplay, "Press a key to begin!", 64, WIDTH / 2, HEIGHT * 3 / 4)
+    draw_text(gameDisplay, "Press space bar to begin!", 64, WIDTH / 2, HEIGHT * 3 / 4)
     pygame.display.flip()
     waiting = True
     while waiting:
