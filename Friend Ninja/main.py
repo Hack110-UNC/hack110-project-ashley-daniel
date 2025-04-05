@@ -2,6 +2,8 @@ import pygame, sys
 import os
 import random
 
+os.chdir(os.path.dirname(__file__))
+
 lives = 3
 score = 0
 friends = ['thomas', 'caroline', 'asia', 'dylan', 'josh', 'paris', 'bomb']
@@ -24,9 +26,9 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
 
-background = pygame.image.load(r'C:\Users\Daniel Cao\Desktop\hack110-project-ashley-daniel\Friend Ninja\images\background.jpg')
+background = pygame.image.load("background.jpg")
 font = pygame.font.Font(None, 42)
-score_count = font.reader('Score: ' + str(score), True, (255, 255, 255))
+score_count = font.render('Score: ' + str(score), True, (255, 255, 255))
 lives_icon = pygame.image.load('images/heart.jpg')
 
 def random_friends(friend):
@@ -48,7 +50,7 @@ def random_friends(friend):
 
 data = {}
 for friend in friends:
-    generate_random_friends(friend)
+    random_friends(friend)
 
 def hide_cross_lives(x, y):
     gameDisplay.blit(pygame.imagge.load("images/empty_heart.png"), (x,y))
@@ -122,7 +124,7 @@ while game_running :
             gameDisplay.blit(value['img'], (value['x'], value['y']))
             
         else:
-            generate_random_friends(key)
+            random_friends(key)
 
         current_position = pygame.mouse.get_pos()
 
@@ -153,7 +155,7 @@ while game_running :
                 score_text = font.render('Score : ' + str(score), True, (255, 255, 255))
                 value['hit'] = True
         else:
-            generate_random_friends(key)
+            random_friends(key)
 
     pygame.display.update()
     clock.tick(FPS)     
