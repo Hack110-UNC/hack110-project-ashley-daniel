@@ -143,11 +143,12 @@ while game_running :
                         show_gameover_screen()
                         game_over = True
 
-                    half_fruit_path = "images/explosion.png"
+                    half_friend_path = "images/explosion.png"
+                    half_friend_path = pygame.transform.scale(half_friend_path, (10, 10))
                 else:
-                    half_fruit_path = "images/" + "half_" + key + ".png"
+                    half_friend_path = "images/" + "half_" + key + ".png"
 
-                value['img'] = pygame.image.load(half_fruit_path)
+                value['img'] = pygame.image.load(half_friend_path)
                 value['speed_x'] += 10
                 if key != 'bomb' :
                     score += 1
