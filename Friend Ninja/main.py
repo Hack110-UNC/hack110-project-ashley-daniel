@@ -144,7 +144,6 @@ while game_running :
                         game_over = True
 
                     half_friend_path = "images/plow.png"
-                    half_friend_path = pygame.transform.scale(half_friend_path, (10, 10))
                 else:
                     half_friend_path = "images/" + "half_" + key + ".png"
 
