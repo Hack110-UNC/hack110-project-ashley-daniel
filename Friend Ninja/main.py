@@ -6,7 +6,7 @@ os.chdir(os.path.dirname(__file__))
 
 player_lives = 3                                               
 score = 0                                                       
-friends = ['asia', 'caroline', 'dylan', 'paris', 'thomas']    
+friends = ['asia', 'caroline', 'dylan', 'paris', 'thomas', 'bomb']    
 
 
 WIDTH = 800
@@ -143,7 +143,7 @@ while game_running :
                         show_gameover_screen()
                         game_over = True
 
-                    half_friend_path = "images/explosion.png"
+                    half_friend_path = "images/plow.png"
                     half_friend_path = pygame.transform.scale(half_friend_path, (10, 10))
                 else:
                     half_friend_path = "images/" + "half_" + key + ".png"
