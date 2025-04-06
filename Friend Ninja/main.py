@@ -13,7 +13,7 @@ WIDTH = 800
 HEIGHT = 500
 FPS = 30                                                
 pygame.init()
-pygame.display.set_caption('Fruit-Ninja Game -- DataFlair')
+pygame.display.set_caption('Friend Ninja')
 gameDisplay = pygame.display.set_mode((WIDTH, HEIGHT))   
 clock = pygame.time.Clock()
 
