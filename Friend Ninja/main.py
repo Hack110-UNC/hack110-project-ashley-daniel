@@ -115,10 +115,10 @@ while game_running :
 
     for key, value in data.items():
         if value['throw']:
-            value['x'] += value['speed_x']
-            value['y'] += value['speed_y']
-            value['speed_y'] += (1 * value['t'])
-            value['t'] += 1
+            value['x'] += value['speed_x']         
+            value['y'] += value['speed_y']          
+            value['speed_y'] += (1 * value['t'])    
+            value['t'] += 1  
 
         if value['y'] <= 800:
             gameDisplay.blit(value['img'], (value['x'], value['y']))
@@ -144,11 +144,11 @@ while game_running :
                         show_gameover_screen()
                         game_over = True
 
-                    half_fruit_path = "images/Preview_107.png"
+                    half_friend_path = "images/bomb.png"
                 else:
-                    half_fruit_path = "images/" + "half_" + key + ".png"
+                    half_friend_path = "images/" + "half_" + key + ".png"
 
-                value['img'] = pygame.image.load(half_fruit_path)
+                value['img'] = pygame.image.load(half_friend_path)
                 value['speed_x'] += 10
                 if key != 'bomb' :
                     score += 1

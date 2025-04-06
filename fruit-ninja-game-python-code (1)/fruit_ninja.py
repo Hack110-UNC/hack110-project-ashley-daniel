@@ -1,6 +1,7 @@
 import pygame, sys
 import os
 import random
+
 os.chdir(os.path.dirname(__file__))
 
 player_lives = 3                                                #keep track of lives
