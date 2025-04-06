@@ -10,7 +10,7 @@ fruits = ['melon', 'orange', 'pomegranate', 'guava', 'bomb']    #entities in the
 # initialize pygame and create window
 WIDTH = 800
 HEIGHT = 500
-FPS = 12                                                 #controls how often the gameDisplay should refresh. In our case, it will refresh every 1/12th second
+FPS = 30                                                #controls how often the gameDisplay should refresh. In our case, it will refresh every 1/12th second
 pygame.init()
 pygame.display.set_caption('Fruit-Ninja Game -- DataFlair')
 gameDisplay = pygame.display.set_mode((WIDTH, HEIGHT))   #setting game display size
@@ -35,8 +35,8 @@ def generate_random_fruits(fruit):
         'img': pygame.image.load(fruit_path),
         'x' : random.randint(100,500),          #where the fruit should be positioned on x-coordinate
         'y' : 800,
-        'speed_x': random.randint(-10,10),      #how fast the fruit should move in x direction. Controls the diagonal movement of fruits
-        'speed_y': random.randint(-80, -60),    #control the speed of fruits in y-directionn ( UP )
+        'speed_x': random.randint(-8,8),      #how fast the fruit should move in x direction. Controls the diagonal movement of fruits
+        'speed_y': random.randint(-100, -80),    #control the speed of fruits in y-directionn ( UP )
         'throw': False,                         #determines if the generated coordinate of the fruits is outside the gameDisplay or not. If outside, then it will be discarded
         't': 0,                                 #manages the
         'hit': False,

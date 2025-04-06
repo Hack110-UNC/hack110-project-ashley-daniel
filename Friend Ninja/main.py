@@ -10,7 +10,7 @@ friends = ['thomas', 'caroline', 'asia', 'dylan', 'josh', 'paris', 'bomb']
 
 WIDTH = 800
 HEIGHT = 500
-FPS = 20
+FPS = 25
 
 pygame.init()
 pygame.display.set_caption('Friend Ninja')
@@ -37,8 +37,8 @@ def random_friends(friend):
         'img': pygame.image.load(friend_path),
         'x': random.randint(100,500),
         'y': 800,
-        'speed_x': random.randint(-10,10),
-        'speed_y': random.randint(-80,-60),
+        'speed_x': random.randint(-8,8),
+        'speed_y': random.randint(-100,-80),
         'throw': False,
         't': 0,
         'hit' : False,
@@ -109,7 +109,7 @@ while game_running :
             game_running = False
     
     gameDisplay.blit(background, (0,0))
-    gameDisplay.blit(score_text, (0,0))
+    gameDisplay.blit(score_count, (0,0))
     draw_lives(gameDisplay, 690, 5, player_lives, 'images/heart.jpg')
 
 
