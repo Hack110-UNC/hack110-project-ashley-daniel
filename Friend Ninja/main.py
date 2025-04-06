@@ -36,10 +36,10 @@ def generate_random_friends(friend):
         'img': pygame.image.load(friend_path),
         'x' : random.randint(100,500),          
         'y' : 800,
-        'speed_x': random.randint(-8,0),     
+        'speed_x': random.randint(-4,0),     
         'speed_y': random.randint(-100, -95),    
         'throw': False,                         
-        't': 0,                                 
+        't': 7,                                 
         'hit': False,
     }
 
@@ -119,7 +119,7 @@ while game_running :
             value['x'] += value['speed_x']         
             value['y'] += value['speed_y']         
             value['speed_y'] += (1 * value['t'])   
-            value['t'] += 1                        
+            value['t'] += .15                        
 
             if value['y'] <= 800:
                 gameDisplay.blit(value['img'], (value['x'], value['y']))    
